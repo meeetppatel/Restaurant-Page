@@ -50,8 +50,51 @@ const loadheader = function(){
 
 /***/ }),
 /* 2 */
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadhome": () => (/* binding */ loadhome)
+/* harmony export */ });
+const loadhome = function (){
+    const container = document.getElementById("content");
+
+    const main = document.createElement("div");
+    main.classList.add("main");
+
+    const home = document.createElement("div");
+    home.classList.add("home");
+
+    const toptext = document.createElement("div");
+    toptext.classList.add("top-text");
+
+    const imgdiv = document.createElement("div");
+    imgdiv.classList.add("chef-img");
+
+    const bottomtext = document.createElement("div");
+    bottomtext.classList.add("bottom-text");
+
+    const line1 = document.createElement("p");
+    line1.textContent="Best pizza in your country";
+    const line2 = document.createElement("p");
+    line2.textContent="Made with passion since 1908";
+    const line3 = document.createElement("p");
+    line3.textContent="Order online or visit us!";
+
+    toptext.appendChild(line1);
+    toptext.appendChild(line2);
+    bottomtext.appendChild(line3);
+
+    home.appendChild(toptext);
+    home.appendChild(imgdiv);
+    home.appendChild(bottomtext);
+
+    main.appendChild(home);
+
+    container.appendChild(main);
+
+}
 
 
 /***/ }),
@@ -99,12 +142,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
+
 
 
 
 function loaddefault() {
     document.getElementById('content').replaceChildren();
     (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
+    (0,_home__WEBPACK_IMPORTED_MODULE_2__.loadhome)();
     (0,_footer__WEBPACK_IMPORTED_MODULE_1__.loadfooter)();
 }
 
@@ -186,7 +232,6 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
@@ -200,9 +245,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const content = document.getElementById("content");
-
 (0,_default__WEBPACK_IMPORTED_MODULE_5__.loaddefault)();
+
+
 })();
 
 /******/ })()
