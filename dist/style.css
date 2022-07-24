@@ -1,0 +1,133 @@
+:root {
+    --font-color: rgba(255, 255, 255, 0.842);
+    --font-color-dark: rgba(255, 255, 255, 0.459);
+    --black-background: rgba(0, 0, 0, 0.664);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+body {
+    font-family: 'Montserrat', cursive;
+    background: url(./images/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    color: var(--font-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    width: 100vw;
+    background-color: var(--black-background);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+.btns {
+    font-family: 'Montserrat', cursive;
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
+    color: var(--font-color);
+    background:transparent;
+    border: none;
+}
+
+.btns:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--font-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.btns:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.main {
+    max-width: 700px;
+    padding: 4rem;
+    margin: 6rem 0;
+    background-color: var(--black-background);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 520px;
+    gap: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.chef-img {
+    margin: 30px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: url(./images/chef.jpg) no-repeat center center;
+    background-size: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+
+
+
+footer {
+    font-size: 1rem;
+    width: 100vw;
+    background-color: var(--black-background);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fa-github {
+    font-size: 1rem;
+    color: white;
+}
+
+.fa-github:hover {
+    color: var(--font-color-dark);
+}
