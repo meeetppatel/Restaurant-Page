@@ -13,14 +13,14 @@ const loadmenu = function() {
     const menu = document.createElement("div");
     menu.classList.add("menu");
 
-    const item1 = createitem("pizza1","asdadadadaasda", "./images/pizza1.jpg");
-    const item2 = createitem("pizza2","asdadadadaasda", "./images/pizza2.jpg");
-    const item3 = createitem("pizza3","asdadadadaasda", "./images/pizza3.jpg");
-    const item4 = createitem("pizza4","asdadadadaasda", "./images/pizza4.jpg");
-    const item5 = createitem("pizza5","asdadadadaasda", "./images/pizza5.jpg");
-    const item6 = createitem("pizza6","asdadadadaasda", "./images/pizza6.jpg");
-    const item7 = createitem("pizza7","asdadadadaasda", "./images/pizza7.jpg");
-    const item8 = createitem("pizza8","asdadadadaasda", "./images/pizza8.jpg");
+    const item1 = createitem("Red Monster Pizza","Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil", "./images/pizza1.jpg");
+    const item2 = createitem("Green house","Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil", "./images/pizza2.jpg");
+    const item3 = createitem("Otc delight","Tomato sauce, Mozarella, Chilli flakes, Olives, Basil", "./images/pizza3.jpg");
+    const item4 = createitem("Paneer Bomb","Tomato sauce, Bacon, Pineapple, Olives, Basil", "./images/pizza4.jpg");
+    const item5 = createitem("Tripple threat","Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli", "./images/pizza5.jpg");
+    const item6 = createitem("Jamun Burst","Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil", "./images/pizza6.jpg");
+    const item7 = createitem("Palak Tomato shot","Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli", "./images/pizza7.jpg");
+    const item8 = createitem("Special Latrin carnage","White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil", "./images/pizza8.jpg");
 
     menu.appendChild(item1);
     menu.appendChild(item2);
