@@ -93,16 +93,13 @@ h1 {
     height: 450px;
     width: 520px;
     gap: 10px;
+    
 }
 
 p {
     font-size: 1.2rem;
 }
 
-.map{
-    height: 500px;
-    width: 500px;
-}
 
 .chef-img {
     margin: 30px;
