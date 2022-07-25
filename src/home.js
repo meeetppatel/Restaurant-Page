@@ -1,5 +1,13 @@
+import { loadheader } from './header';
+import { loadfooter } from './footer';
+
+
 const loadhome = function (){
+
+    
     const container = document.getElementById("content");
+    container.replaceChildren();
+    loadheader();
 
     const main = document.createElement("div");
     main.classList.add("main");
@@ -34,6 +42,8 @@ const loadhome = function (){
     main.appendChild(home);
 
     container.appendChild(main);
+
+    loadfooter();
 
 }
 export{loadhome};

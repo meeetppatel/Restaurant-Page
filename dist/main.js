@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "loadheader": () => (/* binding */ loadheader)
@@ -53,13 +53,22 @@ const loadheader = function () {
 /* 2 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "loadhome": () => (/* binding */ loadhome)
 /* harmony export */ });
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+
+
+
+
 const loadhome = function (){
+
+    
     const container = document.getElementById("content");
+    container.replaceChildren();
+    (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
 
     const main = document.createElement("div");
     main.classList.add("main");
@@ -95,12 +104,29 @@ const loadhome = function (){
 
     container.appendChild(main);
 
+    (0,_footer__WEBPACK_IMPORTED_MODULE_1__.loadfooter)();
+
 }
 
 
 /***/ }),
 /* 3 */
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadfooter": () => (/* binding */ loadfooter)
+/* harmony export */ });
+const loadfooter = function (){
+
+    const container = document.getElementById("content");
+
+    const footer = document.createElement("footer");
+    footer.classList.add("footer");
+    footer.innerHTML = `Copyright © 2022 MeetPatel <a href="https://github.com/meetmepatel"><i class="fa-brands fa-github"></i></a>`;
+
+    container.appendChild(footer);
+}
 
 
 
@@ -108,14 +134,52 @@ const loadhome = function (){
 /* 4 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadmenu": () => (/* binding */ loadmenu)
+/* harmony export */ });
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+
+
+
+const loadmenu = function() {
+    const container = document.getElementById("content");
+    container.replaceChildren();
+
+    (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
+
+    const main = document.createElement("div");
+    main.classList.add("main");
+
+
+
+
+
+    (0,_footer__WEBPACK_IMPORTED_MODULE_1__.loadfooter)();
+}
+
+
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "loadcontact": () => (/* binding */ loadcontact)
 /* harmony export */ });
-const loadcontact = function(){
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 
+
+
+const loadcontact = function(){
     const container = document.getElementById("content");
+    container.replaceChildren()
+
+    ;(0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
+
 
     const main = document.createElement("div");
     main.classList.add("main");
@@ -145,52 +209,7 @@ const loadcontact = function(){
     main.appendChild(contact);
 
     container.appendChild(main);
-}
 
-
-
-/***/ }),
-/* 5 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "loadfooter": () => (/* binding */ loadfooter)
-/* harmony export */ });
-const loadfooter = function (){
-
-    const container = document.getElementById("content");
-
-    const footer = document.createElement("footer");
-    footer.classList.add("footer");
-    footer.innerHTML = `Copyright © 2022 MeetPatel <a href="https://github.com/meetmepatel"><i class="fa-brands fa-github"></i></a>`;
-
-    container.appendChild(footer);
-}
-
-
-
-/***/ }),
-/* 6 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "loaddefault": () => (/* binding */ loaddefault)
-/* harmony export */ });
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
-
-
-
-
-function loaddefault() {
-    document.getElementById('content').replaceChildren();
-    (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
-    (0,_home__WEBPACK_IMPORTED_MODULE_2__.loadhome)();
     (0,_footer__WEBPACK_IMPORTED_MODULE_1__.loadfooter)();
 }
 
@@ -224,18 +243,6 @@ function loaddefault() {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -266,17 +273,14 @@ function loaddefault() {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3);
 
 
 
@@ -284,23 +288,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-(0,_default__WEBPACK_IMPORTED_MODULE_5__.loaddefault)();
-
+(0,_home__WEBPACK_IMPORTED_MODULE_1__.loadhome)();
 
 const tabswich = function(){
     document.getElementById("homeBtn").addEventListener("click", function(){
-        window.location.reload();
-        (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
         (0,_home__WEBPACK_IMPORTED_MODULE_1__.loadhome)();
-        (0,_footer__WEBPACK_IMPORTED_MODULE_4__.loadfooter)();
         tabswich();
     });
     document.getElementById("contactBtn").addEventListener("click",function(){
-        window.location.reload();
-        (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
         (0,_contact__WEBPACK_IMPORTED_MODULE_3__.loadcontact)();      
-        (0,_footer__WEBPACK_IMPORTED_MODULE_4__.loadfooter)();
+        tabswich();
+    });
+    document.getElementById("menuBtn").addEventListener("click",function(){
+        (0,_menu__WEBPACK_IMPORTED_MODULE_2__.loadmenu)();
         tabswich();
     })
     
