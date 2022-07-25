@@ -2,6 +2,7 @@
     --font-color: rgba(255, 255, 255, 0.842);
     --font-color-dark: rgba(255, 255, 255, 0.459);
     --black-background: rgba(0, 0, 0, 0.664);
+    --black-background-dark: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -133,4 +134,30 @@ footer {
 
 .fa-github:hover {
     color: var(--font-color-dark);
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black-background-dark);
+    justify-content:center;
+    align-items:center;
+    gap: 20px;
+    height: 350px;
+    width: 250px;
+
+}
+
+.items img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
 }
