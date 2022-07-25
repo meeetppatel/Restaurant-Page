@@ -9,42 +9,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "loadheader": () => (/* binding */ loadheader)
 /* harmony export */ });
-const loadheader = function(){
-    const container = document.getElementById("content");
+const loadheader = function () {
+  const container = document.getElementById("content");
+  container.textContent=""
 
-    const header = document.createElement("header");
+  const header = document.createElement("header");
 
-    const title = document.createElement("h1");
-    title.textContent="Tuscany Courtyard";
-    
-    const nav = document.createElement("div");
-    nav.classList.add("nav");
+  const title = document.createElement("h1");
+  title.textContent = "Tuscany Courtyard";
 
-    const homebtn = document.createElement("button");
-    // homebtn.id = "homeBtn";
-    homebtn.textContent = "Home";
-    homebtn.classList.add("btns");
+  const nav = document.createElement("div");
+  nav.classList.add("nav");
 
-    const menubtn = document.createElement("button");
-    // homebtn.id = "menuBtn";
-    menubtn.textContent = "Menu";
-    menubtn.classList.add("btns");
+  const homebtn = document.createElement("button");
+  homebtn.textContent = "Home";
+  homebtn.setAttribute("id", "homeBtn");
+  homebtn.classList.add("btns");
 
-    const contactbtn = document.createElement("button");
-    // homebtn.id = "contactBtn";
-    contactbtn.textContent = "Contact";
-    contactbtn.classList.add("btns");
+  const menubtn = document.createElement("button");
+  menubtn.textContent = "Menu";
+  menubtn.setAttribute("id", "menuBtn");
+  menubtn.classList.add("btns");
 
-    nav.appendChild(homebtn);
-    nav.appendChild(menubtn);
-    nav.appendChild(contactbtn);
+  const contactbtn = document.createElement("button");
+  contactbtn.textContent = "Contact";
+  contactbtn.setAttribute("id", "contactBtn");
+  contactbtn.classList.add("btns");
 
-    header.appendChild(title);
-    header.appendChild(nav);
+  nav.appendChild(homebtn);
+  nav.appendChild(menubtn);
+  nav.appendChild(contactbtn);
 
-    container.appendChild(header);
+  header.appendChild(title);
+  header.appendChild(nav);
 
-}
+  container.appendChild(header);
+};
+
 
 
 
@@ -99,6 +100,57 @@ const loadhome = function (){
 
 /***/ }),
 /* 3 */
+/***/ (() => {
+
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadcontact": () => (/* binding */ loadcontact)
+/* harmony export */ });
+const loadcontact = function(){
+
+    const container = document.getElementById("content");
+
+    const main = document.createElement("div");
+    main.classList.add("main");
+
+    const contact = document.createElement("div");
+    contact.classList.add("home");
+
+    const toptext = document.createElement("div")
+    toptext.classList.add("top-text");
+
+    const line1 = document.createElement("p")
+    line1.textContent="123 456 789";
+
+    const line2 = document.createElement("p")
+    line2.textContent=" Hollywood Boulevard 42, Los Angeles, USA";
+
+    toptext.appendChild(line1);
+    toptext.appendChild(line2);
+
+    const map = document.createElement("div");
+    map.classList.add("map");
+    map.innerHTML=  `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12090.100074099026!2d-73.99295192292728!3d40.75047596100702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25854faa8d447%3A0x100a2b0d8c445c5f!2sCarmine&#39;s%20Italian%20Restaurant%20-%20Times%20Square!5e0!3m2!1sen!2sus!4v1658179578284!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+
+    contact.appendChild(toptext);
+    contact.appendChild(map);
+
+    main.appendChild(contact);
+
+    container.appendChild(main);
+}
+
+
+
+/***/ }),
+/* 5 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -120,18 +172,6 @@ const loadfooter = function (){
 
 
 /***/ }),
-/* 4 */
-/***/ (() => {
-
-
-
-/***/ }),
-/* 5 */
-/***/ (() => {
-
-
-
-/***/ }),
 /* 6 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -141,7 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "loaddefault": () => (/* binding */ loaddefault)
 /* harmony export */ });
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 
 
@@ -232,12 +272,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_contact__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3);
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+
 
 
 
@@ -248,6 +288,25 @@ __webpack_require__.r(__webpack_exports__);
 (0,_default__WEBPACK_IMPORTED_MODULE_5__.loaddefault)();
 
 
+const tabswich = function(){
+    document.getElementById("homeBtn").addEventListener("click", function(){
+        window.location.reload();
+        (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
+        (0,_home__WEBPACK_IMPORTED_MODULE_1__.loadhome)();
+        (0,_footer__WEBPACK_IMPORTED_MODULE_4__.loadfooter)();
+        tabswich();
+    });
+    document.getElementById("contactBtn").addEventListener("click",function(){
+        window.location.reload();
+        (0,_header__WEBPACK_IMPORTED_MODULE_0__.loadheader)();
+        (0,_contact__WEBPACK_IMPORTED_MODULE_3__.loadcontact)();      
+        (0,_footer__WEBPACK_IMPORTED_MODULE_4__.loadfooter)();
+        tabswich();
+    })
+    
+};
+
+tabswich(); 
 })();
 
 /******/ })()
