@@ -1,38 +1,38 @@
-const loadheader = function(){
-    const container = document.getElementById("content");
+const loadheader = function () {
+  const container = document.getElementById("content");
+  container.textContent=""
 
-    const header = document.createElement("header");
+  const header = document.createElement("header");
 
-    const title = document.createElement("h1");
-    title.textContent="Tuscany Courtyard";
-    
-    const nav = document.createElement("div");
-    nav.classList.add("nav");
+  const title = document.createElement("h1");
+  title.textContent = "Tuscany Courtyard";
 
-    const homebtn = document.createElement("button");
-    // homebtn.id = "homeBtn";
-    homebtn.textContent = "Home";
-    homebtn.classList.add("btns");
+  const nav = document.createElement("div");
+  nav.classList.add("nav");
 
-    const menubtn = document.createElement("button");
-    // homebtn.id = "menuBtn";
-    menubtn.textContent = "Menu";
-    menubtn.classList.add("btns");
+  const homebtn = document.createElement("button");
+  homebtn.textContent = "Home";
+  homebtn.setAttribute("id", "homeBtn");
+  homebtn.classList.add("btns");
 
-    const contactbtn = document.createElement("button");
-    // homebtn.id = "contactBtn";
-    contactbtn.textContent = "Contact";
-    contactbtn.classList.add("btns");
+  const menubtn = document.createElement("button");
+  menubtn.textContent = "Menu";
+  menubtn.setAttribute("id", "menuBtn");
+  menubtn.classList.add("btns");
 
-    nav.appendChild(homebtn);
-    nav.appendChild(menubtn);
-    nav.appendChild(contactbtn);
+  const contactbtn = document.createElement("button");
+  contactbtn.textContent = "Contact";
+  contactbtn.setAttribute("id", "contactBtn");
+  contactbtn.classList.add("btns");
 
-    header.appendChild(title);
-    header.appendChild(nav);
+  nav.appendChild(homebtn);
+  nav.appendChild(menubtn);
+  nav.appendChild(contactbtn);
 
-    container.appendChild(header);
+  header.appendChild(title);
+  header.appendChild(nav);
 
-}
+  container.appendChild(header);
+};
 
-export {loadheader};
+export { loadheader };
